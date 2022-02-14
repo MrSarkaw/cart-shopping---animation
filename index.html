@@ -8,20 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-    <style>
-        .animation{
-            animation: 2s ani forwards;
-        
-        }
-
-        @keyframes ani {
-            
-            to{
-                left: 1166.15625px;
-                top: 21px;
-            }
-        }
-    </style>
+    <link href="index.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-300 overflow-hidden" id="body">
     <div class="bg-white">
@@ -33,7 +20,7 @@
                  </div>
                  <div class="relative">
                      <span id="num" class="w-4 text-sm -top-3 right-0 h-4 rounded-full bg-red-500 absolute flex items-center justify-center text-white">0</span>
-                     <i class="fas fa-cart-shopping" id="cart"></i>
+                     <i class="fas fa-cart-shopping relative" id="cart"></i>
                  </div>
                  <div>
                      <i class="fas fa-info"></i>
@@ -52,7 +39,7 @@
             <i class="fas fa-user"></i>
         </div>
     </div>
-    <div class=" gap-10 grid grid-cols-4 w-10/12 mx-auto">
+    <div class=" gap-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-10/12 mx-auto">
         <div class=" rounded-3xl bg-gradient-to-b from-white to-gray-300 w-full">
             <img class="w-8/12 mx-auto" src="https://cdn.shopify.com/s/files/1/1104/4168/products/WR3WNCW_SHOE_ANGLE_GLOBAL_WOMENS_WOOL_RUNNER_GREY_LIGHT_GREY_bca9b775-cdd3-4bf2-afef-97935ea55cf8_600x600.png?v=1610049516" alt="">
             <div class="flex items-center justify-between p-2">
@@ -113,7 +100,7 @@
 
     <script>
       
-        
+        console.log(document.getElementById("cart").getBoundingClientRect().left)
         let addItemToCart = (e)=>{
             
             let tag = e.getBoundingClientRect()
