@@ -100,7 +100,9 @@
 
     <script>
       
-        console.log(document.getElementById("cart").getBoundingClientRect().left)
+        document.documentElement.style.setProperty("--position",document.getElementById("cart").getBoundingClientRect().left+"px");
+
+
         let addItemToCart = (e)=>{
             
             let tag = e.getBoundingClientRect()
