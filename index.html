@@ -100,7 +100,16 @@
 
     <script>
       
-        document.documentElement.style.setProperty("--position",document.getElementById("cart").getBoundingClientRect().left+"px");
+
+        let setPosition = ()=>{
+             document.documentElement.style.setProperty("--position",document.getElementById("cart").getBoundingClientRect().left+"px");
+        };
+
+        window.onresize=(()=>{
+            setPosition();
+        })
+
+        setPosition();
 
 
         let addItemToCart = (e)=>{
