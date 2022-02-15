@@ -10,7 +10,7 @@
 
     <link href="index.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-300 overflow-hidden" id="body">
+<body class="bg-gray-300" id="body">
     <div class="bg-white">
         <div class="flex items-center justify-between w-10/12 mx-auto p-4">
              <p>Logo</p>
@@ -106,9 +106,11 @@
         let addItemToCart = (e)=>{
             
             let tag = e.getBoundingClientRect()
+
+            
             const para = document.createElement("i");
             para.setAttribute("id","new")
-            para.setAttribute("style","position:absolute;top:"+tag.top+"px;left:"+tag.left+"px")
+            para.setAttribute("style","position:absolute;top:"+(tag.top+ window.scrollY)+"px;left:"+tag.left+"px")
             para.setAttribute("class","fa-solid fa-shirt text-3xl text-blue-500 animation")
             
             
